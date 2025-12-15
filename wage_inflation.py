@@ -1,7 +1,7 @@
 import pickle as pkl
 import numpy as np
 
-path = r"/workspace/QWEN2.5_42_GRPO_700step-/QWEN2.5_42_GRPO_1/data/gpt-3-noperception-reflection-1-100agents-240months/dense_log.pkl"
+path = r"data/gpt-3-noperception-reflection-1-100agents-240months/dense_log.pkl"
 
 with open(path, "rb") as f:
     log = pkl.load(f)

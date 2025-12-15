@@ -159,7 +159,7 @@ if __name__ == '__main__':
     import sys
     
     log_path = '/workspace/training.log'
-    output_dir = '/workspace/QWEN2.5_42_GRPO_1'
+    output_dir = '.'
     
     if len(sys.argv) > 1:
         log_path = sys.argv[1]

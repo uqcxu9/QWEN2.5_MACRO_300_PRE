@@ -21,7 +21,7 @@ def load_good_decisions():
     """Lazily load good decision data"""
     global GOOD_DECISIONS_DF
     if GOOD_DECISIONS_DF is None:
-        csv_path = '/workspace/QWEN2.5_42_GRPO_700step-/QWEN2.5_42_GRPO_1/data/gpt-3-noperception-reflection-1-100agents-240months/good_decisions.csv'
+        csv_path = 'data/gpt-3-noperception-reflection-1-100agents-240months/good_decisions.csv'
         if os.path.exists(csv_path):
             GOOD_DECISIONS_DF = pd.read_csv(csv_path)
             print(f"Loaded {len(GOOD_DECISIONS_DF)} good decision examples")

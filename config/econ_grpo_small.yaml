@@ -13,8 +13,8 @@ defaults:
 
 # ===== 数据配置：batch_size=2 加速训练 =====
 data:
-  train_files: /workspace/QWEN2.5_42_GRPO_700step-/QWEN2.5_42_GRPO_1/data/verl_dataset_small/train.parquet
-  val_files:   /workspace/QWEN2.5_42_GRPO_700step-/QWEN2.5_42_GRPO_1/data/verl_dataset_small/val.parquet
+  train_files: data/verl_dataset_small/train.parquet
+  val_files:   data/verl_dataset_small/val.parquet
   prompt_key: prompt
   max_prompt_length: 1536      # 增加以容纳完整 prompt
   max_response_length: 128     # 增加 response 长度
@@ -132,7 +132,7 @@ reward_model:
 
 # ===== 自定义 Reward Function =====
 custom_reward_function:
-  path: /workspace/QWEN2.5_42_GRPO_700step-/QWEN2.5_42_GRPO_1/RL/reward.py
+  path: RL/reward.py
   name: compute_score
 
 # ===== 训练器配置 =====
@@ -151,7 +151,7 @@ trainer:
   critic_warmup: 0
   resume_mode: disable               # 从头开始训练
   del_local_ckpt_after_load: False
-  default_local_dir: /workspace/QWEN2.5_42_GRPO_700step-/QWEN2.5_42_GRPO_1/checkpoints
+  default_local_dir: checkpoints
   default_hdfs_dir: null
   ray_wait_register_center_timeout: 600
   device: cuda
